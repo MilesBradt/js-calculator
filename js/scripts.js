@@ -14,6 +14,10 @@ var fahrenheitIndex = function(fahrenheit) {
   return (fahrenheit - 32) * 5/9;
 };
 
+var gallonstoLiter = function(gallons) {
+  return (gallons * 3.785);
+};
+
 
 
 // user interface
@@ -37,4 +41,15 @@ $(document).ready(function() {
    var fahrenheit = parseInt($("#userFahrenheit").val());
    $('.outputFahrenheit').text("The temperature is " + fahrenheitIndex(fahrenheit)) + " in Celsius";
  });
+
+$(".liters").submit(function(event){
+  event.preventDefault();
+  var inputGallon = parseInt($("#userGallon").val());
+  $(".outputGallon").text(gallonstoLiter(inputGallon) + " in Liters")
+});
+
+
+
+
+
 });
