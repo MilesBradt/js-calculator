@@ -1,0 +1,12 @@
+.container{
+  text-align: center;
+}
+
+.ui {
+  display: block;
+  margin: 0 auto;
+}
+
+.userButton {
+  margin-top: 10px;
+}
