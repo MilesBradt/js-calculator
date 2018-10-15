@@ -5,13 +5,13 @@
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    </script>
+  </script>
   <title>Body Mass</title>
   </head>
   <body>
     <div class="container">
       <h1>BMI Calculator</h1>
-      <form class="input-group">
+      <form class="input-group bmi">
         <div class="ui">
           <span class="input-group-text" id="basic-addon1">Weight (lbs)</span>
           <input type="text" class="form-control" id="userMass"></input>
@@ -21,8 +21,35 @@
         </div>
       </form>
       <div class="output">
-        
+
+      </div>
+
+    <div class="row">
+      <div class="col-sm-6 help">
+        <h1>Temperature in Celsius</h1>
+      <form class="input-group celsius">
+        <div class="ui-temp">
+          <span class="input-group-text" id="basic-addon1">Temperature in Celsius</span>
+          <input type="text" class="form-control" id="userCelsius"></input>
+          <button type="submit" class="userButton" name="button">Submit</button>
+        </div>
+      </form>
+      <div class="outputCelsius">
       </div>
     </div>
+    <div class="col-sm-6 help">
+      <h1>Temperature in Fahrenheit</h1>
+      <form class="input-group fahrenheit">
+        <div class="ui-temp">
+          <span class="input-group-text" id="basic-addon1">Temperautre in Fahrenheit</span>
+          <input type="text" class="form-control" id="userFahrenheit"></input>
+          <button type="submit" class="userButton" name="button">Submit</button>
+        </div>
+      </form>
+      <div class="outputFahrenheit">
+      </div>
+    </div>
+  </div>
+  </div>
   </body>
 </html>

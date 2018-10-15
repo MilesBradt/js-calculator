@@ -9,6 +9,14 @@ var bmiIndex = function(mass, height) {
   return mass / (height**2) * 703;
 };
 
+var celsuisIndex = function(celsuis) {
+  return (celsuis * 9/5) + 32;
+};
+
+var fahrenheitIndex = function(fahrenheit) {
+  return (fahrenheit - 32) * 5/9;
+};
+
 //Write a function that converts temperature between celsius and fahrenheit
 
 
@@ -18,11 +26,24 @@ var bmiIndex = function(mass, height) {
 
 
 $(document).ready(function() {
-  $(".input-group").submit(function(event){
+  $(".bmi").submit(function(event){
     event.preventDefault();
     var mass = parseInt($("#userMass").val());
     var height = parseInt($("#userHeight").val());
     // alert(bmiIndex(mass, height));
     $('.output').text("Your BMI is " + bmiIndex(mass, height));
   });
+
+
+ $(".celsius").submit(function(event){
+   event.preventDefault();
+   var celsius = parseInt($("#userCelsius").val());
+   $('.outputCelsius').text("The temperature is " + celsuisIndex(celsius)) + " in Fahrenheit";
+ });
+
+ $(".fahrenheit").submit(function(event){
+   event.preventDefault();
+   var fahrenheit = parseInt($("#userFahrenheit").val());
+   $('.outputFahrenheit').text("The temperature is " + fahrenheitIndex(fahrenheit)) + " in Celsius";
+ });
 });

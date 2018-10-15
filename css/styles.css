@@ -1,10 +1,36 @@
-.container{
+body {
+   background-color: #363B40;
+   color: #C5C8D9;
+   text-align: center;
+}
+
+.form-control {
+  background-color: #656A73;
+}
+
+.temperature {
   text-align: center;
 }
 
 .ui {
   display: block;
   margin: 0 auto;
+}
+
+.celsius {
+  display: block;
+}
+
+.fahrenheit {
+  display: block;
+}
+
+.bmi {
+  padding-bottom: 50px;
+}
+
+.help {
+  width: 150px;
 }
 
 .userButton {
