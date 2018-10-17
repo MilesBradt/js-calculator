@@ -9,10 +9,11 @@ var celsuisIndex = function(celsuis) {
   return (celsuis * 9/5) + 32;
 };
 
-//Write functions to be used by a cooking app that convert between units
 var fahrenheitIndex = function(fahrenheit) {
   return (fahrenheit - 32) * 5/9;
 };
+
+//Write functions to be used by a cooking app that convert between units
 
 var gallonstoLiter = function(gallons) {
   return (gallons * 3.785);
@@ -20,7 +21,7 @@ var gallonstoLiter = function(gallons) {
 
 
 
-// user interface
+// User interface
 $(document).ready(function() {
   $(".bmi").submit(function(event){
     event.preventDefault();
@@ -30,26 +31,21 @@ $(document).ready(function() {
     $('.output').text("Your BMI is " + bmiIndex(mass, height));
   });
 
- $(".celsius").submit(function(event){
-   event.preventDefault();
-   var celsius = parseInt($("#userCelsius").val());
-   $('.outputCelsius').text("The temperature is " + celsuisIndex(celsius)) + " in Fahrenheit";
- });
+   $(".celsius").submit(function(event){
+     event.preventDefault();
+     var celsius = parseInt($("#userCelsius").val());
+     $('.outputCelsius').text("The temperature is " + celsuisIndex(celsius)) + " in Fahrenheit";
+   });
 
- $(".fahrenheit").submit(function(event){
-   event.preventDefault();
-   var fahrenheit = parseInt($("#userFahrenheit").val());
-   $('.outputFahrenheit').text("The temperature is " + fahrenheitIndex(fahrenheit)) + " in Celsius";
- });
+   $(".fahrenheit").submit(function(event){
+     event.preventDefault();
+     var fahrenheit = parseInt($("#userFahrenheit").val());
+     $('.outputFahrenheit').text("The temperature is " + fahrenheitIndex(fahrenheit)) + " in Celsius";
+   });
 
-$(".liters").submit(function(event){
-  event.preventDefault();
-  var inputGallon = parseInt($("#userGallon").val());
-  $(".outputGallon").text(gallonstoLiter(inputGallon) + " in Liters")
-});
-
-
-
-
-
+  $(".liters").submit(function(event){
+    event.preventDefault();
+    var inputGallon = parseInt($("#userGallon").val());
+    $(".outputGallon").text(gallonstoLiter(inputGallon) + " in Liters")
+  });
 });
