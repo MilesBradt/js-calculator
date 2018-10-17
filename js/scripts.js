@@ -19,6 +19,10 @@ var gallonstoLiter = function(gallons) {
   return (gallons * 3.785);
 };
 
+var milesToKilometers = function(miles) {
+  return (miles * 1.60934);
+};
+
 
 
 // User interface
@@ -47,5 +51,11 @@ $(document).ready(function() {
     event.preventDefault();
     var inputGallon = parseInt($("#userGallon").val());
     $(".outputGallon").text(gallonstoLiter(inputGallon) + " in Liters")
+  });
+
+  $(".kilometers").submit(function(event){
+    event.preventDefault();
+    var inputMile = parseInt($("#userKilometers").val());
+    $('.outputKilometers').text(milesToKilometers(inputMile) + " in kilometers")
   });
 });
